@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_1/myhomepage.dart';
 import 'package:flutter_application_1/login.dart';
 import 'package:flutter_application_1/signup.dart';
-
+import 'package:flutter_application_1/tomesenpossesion.dart';
 import 'package:flutter_application_1/customappbar.dart';
 import 'package:flutter_application_1/searchpage.dart';
 
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName: (ctx) => LoginPage(),
         SignupPage.routeName: (ctx) => SignupPage(),
         '/Login': (ctx) => LoginPage(),
+        SearchPage.routeName: (context) => SearchPage(),
+        TomeEnPossessionPage.routeName: (context) => TomeEnPossessionPage(),
       },
     );
   }

@@ -6,8 +6,10 @@ import 'package:http/http.dart' as http;
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? email;
+  final VoidCallback onLogout;
 
-  CustomAppBar({Key? key, required this.email}) : super(key: key);
+  CustomAppBar({Key? key, required this.email, required this.onLogout})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Icon(Icons.logout),
           onPressed: () {
-            // Gérer la déconnexion ici
+            // Appeler la fonction de déconnexion
+            onLogout();
           },
         ),
       ],
